@@ -10,6 +10,15 @@
       "StackName": "amplify-todolist-dev-191733",
       "StackId": "arn:aws:cloudformation:us-east-1:343360354901:stack/amplify-todolist-dev-191733/4ad91fc0-b21a-11ec-838d-127f00581a21",
       "AmplifyAppId": "d1vhouwxlbrjoc"
+    },
+    "categories": {
+      "function": {
+        "getkey": {
+          "secretsPathAmplifyAppId": "d1vhouwxlbrjoc",
+          "deploymentBucketName": "amplify-todolist-dev-191733-deployment",
+          "s3Key": "amplify-builds/getkey-75655546304f37627431-build.zip"
+        }
+      }
     }
   }
 }

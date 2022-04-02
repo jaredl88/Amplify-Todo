@@ -7,17 +7,19 @@ const Login = (props) => {
     const [username, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState(null);
-        
+    
+  
     const submitHandler = (event) =>{
             event.preventDefault();
             if(username.trim() === '' || password.trim() === ''){
                 setErrorMessage('Both username and password are required');
                 return;
             }
+           
             const requestConfig = {
                 //store as envirnment variable later
                 headers: {
-               'x-api-key': process.env.REACT_APP_ENV_API_KEY,
+               'x-api-key': '',
                 }
             }
 
@@ -85,8 +87,8 @@ const Login = (props) => {
 </div>
 
         
-    )
-    }
+    );
+    };
  
     
 export default Login;

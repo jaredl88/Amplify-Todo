@@ -1,1 +1,10 @@
-{}
+{
+  "function": {
+    "getkey": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": []
+    }
+  }
+}
