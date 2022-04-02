@@ -21,7 +21,7 @@ const TaskList = () => {
       const requestConfig = {
         //store as envirnment variable later
         headers: {
-          'x-api-key': process.env.API_KEY,
+          'x-api-key': process.env.REACT_APP_ENV_API_KEY,
         }
       }
      
@@ -54,7 +54,7 @@ const TaskList = () => {
           const requestConfig = {
               //store as envirnment variable later
               headers: {
-                'x-api-key': process.env.API_KEY,
+                'x-api-key': process.env.REACT_APP_ENV_API_KEY,
               }
             }
             

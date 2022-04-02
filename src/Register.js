@@ -31,7 +31,7 @@ const submitHandler =(event) => {
   const requestConfig = {
       //store as envirnment variable later
       headers: {
-     'x-api-key': process.env.API_KEY,
+     'x-api-key': process.env.REACT_APP_ENV_API_KEY,
       }
   }
 
@@ -105,7 +105,7 @@ const submitHandler =(event) => {
 </div>
 </div>
         
-    )
-}
+    );
+};
 
 export default Register;

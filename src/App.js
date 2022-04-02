@@ -3,6 +3,9 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { getUser, getToken, setUserSession, resetUserSession } from "./service/auth";
 import Header from './Components/Header/Header';
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
 
 const verifyTokenAPIURL = 'https://j2b30glms2.execute-api.us-east-1.amazonaws.com/prod/verify';
 
