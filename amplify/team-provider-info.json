@@ -13,10 +13,10 @@
     },
     "categories": {
       "function": {
-        "getkey": {
+        "amplifyenvconfigfunction": {
           "secretsPathAmplifyAppId": "d1vhouwxlbrjoc",
           "deploymentBucketName": "amplify-todolist-dev-191733-deployment",
-          "s3Key": "amplify-builds/getkey-75655546304f37627431-build.zip"
+          "s3Key": "amplify-builds/amplifyenvconfigfunction-542f5476415250747537-build.zip"
         }
       }
     }

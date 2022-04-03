@@ -1,10 +1,26 @@
 {
   "function": {
-    "getkey": {
+    "amplifyenvconfigfunction": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
       "dependsOn": []
+    }
+  },
+  "api": {
+    "amplifyenvconfig": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "amplifyenvconfigfunction",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
     }
   }
 }

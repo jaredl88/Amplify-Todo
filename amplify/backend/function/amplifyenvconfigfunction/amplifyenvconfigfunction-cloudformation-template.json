@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "{\"createdOn\":\"Windows\",\"createdBy\":\"Amplify\",\"createdWith\":\"7.6.26\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
+  "Description": "Lambda Function resource stack creation using Amplify CLI",
   "Parameters": {
     "CloudWatchRule": {
       "Type": "String",
@@ -18,6 +18,10 @@
     },
     "secretsPathAmplifyAppId": {
       "Type": "String"
+    },
+    "MyEnvVariableKey": {
+      "Type": "String",
+      "Default": "my-environment-variable"
     }
   },
   "Conditions": {
@@ -50,12 +54,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "getkey",
+            "amplifyenvconfigfunction",
             {
               "Fn::Join": [
                 "",
                 [
-                  "getkey",
+                  "amplifyenvconfigfunction",
                   "-",
                   {
                     "Ref": "env"
@@ -73,6 +77,9 @@
             "REGION": {
               "Ref": "AWS::Region"
             },
+            "MY_ENV_VAR": {
+              "Ref": "MyEnvVariableKey"
+            },
             "API_KEY": {
               "Fn::Join": [
                 "",
@@ -87,7 +94,7 @@
                         "env": {
                           "Ref": "env"
                         },
-                        "functionName": "getkey"
+                        "functionName": "amplifyenvconfigfunction"
                       }
                     ]
                   },
@@ -114,12 +121,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "todolistLambdaRole9291169d",
+            "todolistLambdaRole3397e494",
             {
               "Fn::Join": [
                 "",
                 [
-                  "todolistLambdaRole9291169d",
+                  "todolistLambdaRole3397e494",
                   "-",
                   {
                     "Ref": "env"
@@ -231,7 +238,7 @@
                           "env": {
                             "Ref": "env"
                           },
-                          "functionName": "getkey"
+                          "functionName": "amplifyenvconfigfunction"
                         }
                       ]
                     },

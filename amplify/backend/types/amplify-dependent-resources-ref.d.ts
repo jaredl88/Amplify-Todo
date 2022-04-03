@@ -1,10 +1,17 @@
 export type AmplifyDependentResourcesAttributes = {
     "function": {
-        "getkey": {
+        "amplifyenvconfigfunction": {
             "Name": "string",
             "Arn": "string",
             "Region": "string",
             "LambdaExecutionRole": "string"
+        }
+    },
+    "api": {
+        "amplifyenvconfig": {
+            "RootUrl": "string",
+            "ApiName": "string",
+            "ApiId": "string"
         }
     }
 }
