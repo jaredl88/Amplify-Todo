@@ -19,7 +19,7 @@ const Login = (props) => {
             const requestConfig = {
                 //store as envirnment variable later
                 headers: {
-               'x-api-key': process.env.dev.API_KEY,
+               'x-api-key': process.env.API_KEY,
                 }
             }
 
