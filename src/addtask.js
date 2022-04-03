@@ -23,7 +23,7 @@ const apiUrl = 'https://j2b30glms2.execute-api.us-east-1.amazonaws.com/prod/addt
     const requestConfig = {
         //store as envirnment variable later
         headers: {
-       'x-api-key': process.env.API_KEY,
+       'x-api-key': 'Yln5N5b8Sq5m265snaDVc5TWJiAS1Qn980O4FkfD',
         }
     }
     const requestBody =
