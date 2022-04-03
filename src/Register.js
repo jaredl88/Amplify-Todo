@@ -31,7 +31,7 @@ const submitHandler =(event) => {
   const requestConfig = {
       //store as envirnment variable later
       headers: {
-     'x-api-key': process.env.API_KEY,
+     'x-api-key': secrets.API_KEY,
       }
   }
 
