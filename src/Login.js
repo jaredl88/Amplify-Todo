@@ -8,7 +8,7 @@ const Login = (props) => {
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState(null);
     
-  console.log(secrets.API_KEY);
+  
     const submitHandler = (event) =>{
             event.preventDefault();
             if(username.trim() === '' || password.trim() === ''){
@@ -19,7 +19,7 @@ const Login = (props) => {
             const requestConfig = {
                 //store as envirnment variable later
                 headers: {
-               'x-api-key': secrets.API_KEY,
+               'x-api-key': process.env.dev.API_KEY,
                 }
             }
 
