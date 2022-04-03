@@ -8,7 +8,7 @@ const Login = (props) => {
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState(null);
     
-  
+  console.log(process.env.API_KEY);
     const submitHandler = (event) =>{
             event.preventDefault();
             if(username.trim() === '' || password.trim() === ''){
